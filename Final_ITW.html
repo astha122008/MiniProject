@@ -1,0 +1,382 @@
+Page: AJ Nail Art Studio - Clean Collection Layout
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Nail Art Studio | Masterpiece on Your Fingertips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <meta name="view-transition" content="same-origin">
+    <style>
+        :root {
+            --color-cream: #FCF9F6;
+            --color-rose: #E9A196;
+            --color-gold: #C5A059;
+            --color-charcoal: #1C1C1C;
+        }
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Gambetta', serif;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #E8D3A3 50%, #C5A059 100%);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: var(--color-charcoal);
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .rating-star:hover {
+            transform: scale(1.2);
+            color: var(--color-gold);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen relative overflow-x-hidden">
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full z-50 bg-[#FCF9F6] border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <span class="serif text-2xl font-bold tracking-tighter">AJ <span class="text-[#E9A196]">NAILS</span></span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide uppercase">
+                    <a href="#home" id="nav-home" class="nav-link">Home</a>
+                    <a href="#about" id="nav-about" class="nav-link">Our Story</a>
+                    <a href="#gallery" id="nav-gallery" class="nav-link">Collection</a>
+                    <a href="#feedback" id="nav-reviews" class="nav-link">Reviews</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://p.superdesign.dev/draft/6901ca6f-8f08-4dd7-acc1-e5da811e3575" id="nav-login-btn" class="px-6 py-2.5 bg-[#1C1C1C] text-white text-sm font-medium rounded-full hover:bg-opacity-90 transition-all active:scale-95">
+                        Studio Login
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full border border-[#E9A196] text-[#E9A196] text-xs font-bold uppercase tracking-widest">
+                            Exclusive Nail Artistry
+                        </div>
+                        <h1 class="text-6xl lg:text-8xl leading-none font-medium text-[#1C1C1C] tracking-tight">
+                            Elegance in Every <span class="text-[#E9A196] italic">Stroke.</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 max-w-lg leading-relaxed">
+                            Discover the ultimate fusion of luxury and trend at AJ Nail Art Studio. From timeless gel finishes to bespoke hand-painted designs, we define excellence for your hands.
+                        </p>
+                        <div class="flex items-center space-x-6 pt-4">
+                            <a href="#gallery" id="hero-view-work" class="bg-[#E9A196] text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-pink-200 transition-all active:scale-95">
+                                View Collection
+                            </a>
+                            <a href="#feedback" id="hero-reviews-link" class="flex items-center space-x-2 group">
+                                <span class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-[#1C1C1C] group-hover:text-white transition-all">
+                                    <iconify-icon icon="lucide:arrow-down" class="text-lg"></iconify-icon>
+                                </span>
+                                <span class="text-sm font-semibold uppercase tracking-wider">Our Reviews</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#E9A196]/10 rounded-full blur-3xl"></div>
+                        <div class="relative rounded-[40px] overflow-hidden aspect-[4/5] shadow-2xl transform lg:rotate-2">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Luxury Manicure" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 text-white">
+                                <p class="text-xs uppercase tracking-[0.2em] font-medium opacity-80 mb-1">New Season</p>
+                                <h3 class="text-2xl font-semibold">The Velvet Rose Collection</h3>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl hidden lg:block">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="flex -space-x-2">
+                                    <img src="https://i.pravatar.cc/100?u=a1" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+                                    <img src="https://i.pravatar.cc/100?u=b2" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+                                    <img src="https://i.pravatar.cc/100?u=c3" class="w-8 h-8 rounded-full border-2 border-white object-cover">
+                                </div>
+                                <span class="text-xs font-bold text-[#E9A196]">5.0 RATING</span>
+                            </div>
+                            <p class="text-sm font-medium italic">"Best experience I've had!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-12 gap-16 items-center">
+                    <div class="md:col-span-5">
+                        <h2 class="text-4xl md:text-5xl mb-8 leading-tight">
+                            Where Science Meets <span class="text-[#C5A059]">High-Fashion.</span>
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            At AJ Nail Art Studio, we believe your nails are a canvas for personal expression. Founded by master artist AJ in 2018, we have pioneered the intersection of long-lasting nail health and avant-garde aesthetic design.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-10">
+                            We exclusively use organic, 7-free gel systems and high-pigment polishes that treat your natural nails while providing a salon-fresh look for up to 4 weeks.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-3xl font-bold text-[#1C1C1C]">500+</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest">Custom Colors</p>
+                            </div>
+                            <div>
+                                <h4 class="text-3xl font-bold text-[#1C1C1C]">12k+</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-widest">Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 grid grid-cols-2 gap-4 h-[500px]">
+                        <div class="rounded-3xl overflow-hidden mt-12 shadow-lg relative">
+                            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800" alt="Studio Interior" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-3xl overflow-hidden mb-12 shadow-lg relative">
+                            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80&w=800" alt="Artist at Work" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Showcase -->
+        <section id="gallery" class="py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                    <div class="max-w-xl">
+                        <h2 class="text-5xl mb-4">The Polish <span class="text-[#E9A196]">Gallery</span></h2>
+                        <p class="text-gray-500">Our signature selection of quick-dry, high-shine lacquers designed for the modern lifestyle.</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button class="px-6 py-2 border border-gray-200 rounded-full text-sm font-medium hover:border-[#1C1C1C] transition-colors">Classic</button>
+                        <button class="px-6 py-2 border border-gray-200 rounded-full text-sm font-medium hover:border-[#1C1C1C] transition-colors">Pastel</button>
+                        <button class="px-6 py-2 border border-gray-200 rounded-full text-sm font-medium hover:border-[#1C1C1C] transition-colors">Chrome</button>
+                    </div>
+                </div>
+
+
+                <!-- Nail Polish Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-4xl mx-auto">
+                    <!-- Product Card -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-white rounded-3xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=600" alt="Soft Petal Pink" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-medium">Soft Petal Pink</h3>
+                                <p class="text-gray-400 text-sm italic">Signature Polish Collection</p>
+                            </div>
+                            <span class="font-bold text-[#E9A196]">$24</span>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-square bg-white rounded-3xl overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&q=80&w=600" alt="Azure Sky" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-medium">Azure Sky</h3>
+                                <p class="text-gray-400 text-sm italic">Cloud Series</p>
+                            </div>
+                            <span class="font-bold text-[#E9A196]">$26</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <!-- Reviews & Feedback Section -->
+        <section id="feedback" class="py-24 bg-[#1C1C1C] text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-20">
+                    <!-- Left: Form -->
+                    <div>
+                        <h2 class="text-5xl mb-8">Share Your <span class="text-[#E9A196]">Sparkle.</span></h2>
+                        <p class="text-gray-400 mb-12 max-w-md">Loved your appointment? We'd love to hear about it. Your feedback helps our artists grow.</p>
+                        
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label class="text-xs uppercase tracking-widest text-gray-500">Name</label>
+                                    <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#E9A196] transition-colors">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-xs uppercase tracking-widest text-gray-500">Service</label>
+                                    <select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#E9A196] transition-colors">
+                                        <option class="bg-[#1C1C1C]">Gel Manicure</option>
+                                        <option class="bg-[#1C1C1C]">Nail Extension</option>
+                                        <option class="bg-[#1C1C1C]">Custom Nail Art</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <label class="text-xs uppercase tracking-widest text-gray-500 block">Your Rating</label>
+                                <div class="flex space-x-3">
+                                    <iconify-icon icon="lucide:star" class="rating-star text-2xl text-yellow-500 cursor-pointer"></iconify-icon>
+                                    <iconify-icon icon="lucide:star" class="rating-star text-2xl text-yellow-500 cursor-pointer"></iconify-icon>
+                                    <iconify-icon icon="lucide:star" class="rating-star text-2xl text-yellow-500 cursor-pointer"></iconify-icon>
+                                    <iconify-icon icon="lucide:star" class="rating-star text-2xl text-yellow-500 cursor-pointer"></iconify-icon>
+                                    <iconify-icon icon="lucide:star" class="rating-star text-2xl text-white/20 cursor-pointer"></iconify-icon>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs uppercase tracking-widest text-gray-500">Experience</label>
+                                <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-[#E9A196] transition-colors placeholder:text-gray-600" placeholder="How did we do?"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 gold-gradient text-[#1C1C1C] font-bold rounded-xl hover:scale-[1.02] transition-transform">Submit Feedback</button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Testimonials -->
+                    <div class="relative">
+                        <div class="space-y-8">
+                            <!-- Review Card -->
+                            <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] backdrop-blur-sm">
+                                <div class="flex justify-between items-start mb-6">
+                                    <div class="flex items-center space-x-4">
+                                        <img src="https://i.pravatar.cc/100?u=jane" class="w-14 h-14 rounded-full border border-white/20 object-cover">
+                                        <div>
+                                            <h4 class="font-bold">Sophia Loren</h4>
+                                            <p class="text-xs text-gray-500">Gel Enthusiast</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500">
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                    </div>
+                                </div>
+                                <p class="text-lg serif italic text-gray-300">"The attention to detail here is unmatched. AJ herself did my wedding nails and I still get compliments 3 weeks later. The salon is a vibe!"</p>
+                            </div>
+
+                            <!-- Review Card -->
+                            <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] backdrop-blur-sm transform translate-x-4">
+                                <div class="flex justify-between items-start mb-6">
+                                    <div class="flex items-center space-x-4">
+                                        <img src="https://i.pravatar.cc/100?u=lisa" class="w-14 h-14 rounded-full border border-white/20 object-cover">
+                                        <div>
+                                            <h4 class="font-bold">Isabella Chen</h4>
+                                            <p class="text-xs text-gray-500">Local Guide</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500">
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                    </div>
+                                </div>
+                                <p class="text-lg serif italic text-gray-300">"Clean, modern, and high-quality products. I never feel like my nails are being damaged. Highly recommend the art designs."</p>
+                            </div>
+
+                            <!-- Review Card -->
+                            <div class="bg-white/5 border border-white/10 p-8 rounded-[2rem] backdrop-blur-sm">
+                                <div class="flex justify-between items-start mb-6">
+                                    <div class="flex items-center space-x-4">
+                                        <img src="https://i.pravatar.cc/100?u=emily" class="w-14 h-14 rounded-full border border-white/20 object-cover">
+                                        <div>
+                                            <h4 class="font-bold">Marcella Reed</h4>
+                                            <p class="text-xs text-gray-500">Regular Client</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500">
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star"></iconify-icon>
+                                        <iconify-icon icon="mdi:star-half-full"></iconify-icon>
+                                    </div>
+                                </div>
+                                <p class="text-lg serif italic text-gray-300">"Huge selection of colors! I spent 10 minutes just picking the right shade of pink. Professional service every time."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white py-12 border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="serif text-3xl font-bold italic tracking-tighter">AJ <span class="text-[#E9A196]">NAILS</span></div>
+                    
+                    <div class="flex space-x-12 text-sm uppercase font-bold tracking-widest text-gray-400">
+                        <a href="#" id="footer-instagram" class="hover:text-[#E9A196] transition-colors">Instagram</a>
+                        <a href="#" id="footer-tiktok" class="hover:text-[#E9A196] transition-colors">TikTok</a>
+                        <a href="#" id="footer-pinterest" class="hover:text-[#E9A196] transition-colors">Pinterest</a>
+                    </div>
+
+                    <div class="text-right">
+                        <p class="text-sm text-gray-400">© 2024 AJ Nail Art Studio</p>
+                        <p class="text-xs text-gray-300">Created with passion for perfection.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple scroll reveal observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+```
+
+Please reference this design and implement it into our codebase; Try to understand the structure, which part of our codebase is relevant and implement
